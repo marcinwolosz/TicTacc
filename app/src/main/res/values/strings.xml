@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TICTTACTOE_SKURWYSYNY</string>
+    <string name="app_name">TICTTACTOE</string>
     <string name="first_human">Zaczynasz</string>
     <string name="turn_human">Twój ruch</string>
     <string name="turn_computer">Ruch komputera</string>
