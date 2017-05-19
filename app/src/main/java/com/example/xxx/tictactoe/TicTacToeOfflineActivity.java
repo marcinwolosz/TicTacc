@@ -5,6 +5,7 @@ package com.example.xxx.tictactoe;
  */
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -59,34 +60,52 @@ public class TicTacToeOfflineActivity extends Activity {
 
     }
 
+    public void again(View view) {
 
+        switch (view.getId()) {
+
+            case R.id.again:
+                startNewGame();
+                break;
+
+            case R.id.fb:
+                break;
+
+        }
+
+    }
 
 
 
     private void startNewGame()
     {
-        mGame.clearBoard();
+                mGame.clearBoard();
 
-        for (int i = 0; i < mBoardButtons.length; i++)
-        {
-            mBoardButtons[i].setText("");
-            mBoardButtons[i].setEnabled(true);
-            mBoardButtons[i].setOnClickListener(new ButtonClickListener(i));
-        }
+               for (int i = 0; i < mBoardButtons.length; i++)
+                    {
+                         mBoardButtons[i].setText("");
+                        mBoardButtons[i].setEnabled(true);
+                        mBoardButtons[i].setOnClickListener(new ButtonClickListener(i));
+                    }
 
-        if (mHumanFirst)
-        {
-            mInfoTextView.setText(R.string.first_human);
-            mHumanFirst = false;
-        }
-        else
-        {
-            mInfoTextView.setText(R.string.turn_computer);
-            int move = mGame.getComputerMove();
-            setMove(mGame.ANDROID_PLAYER, move);
-            mHumanFirst = true;
-        }
-    }
+                 if (mHumanFirst)
+                     {
+                         mInfoTextView.setText(R.string.first_human);
+                          mHumanFirst = false;
+                     }
+                else
+                {
+                          mInfoTextView.setText(R.string.turn_computer);
+                        int move = mGame.getComputerMove();
+                         setMove(mGame.ANDROID_PLAYER, move);
+                          mHumanFirst = true;
+                    }
+
+                 mGameOver = false;
+            }
+
+
+
 
     private class ButtonClickListener implements View.OnClickListener
     {

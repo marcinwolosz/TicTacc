@@ -18,6 +18,7 @@
     <string name="nine">9</string>
     <string name="info">Info</string>
     <string name="human">Human: </string>
+    <string name="again">Play again </string>
     <string name="ties">Ties: </string>
     <string name="android">Android: </string>
     <string name="contact_heading">Contact Info</string>
